@@ -1,0 +1,4 @@
+{
+  "entryPoints": ["./crypto/src/index.ts"],
+  "out": "docs"
+}

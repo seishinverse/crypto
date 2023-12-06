@@ -1,0 +1,38 @@
+{
+  "name": "crypto",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "crypto/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/crypto",
+        "tsConfig": "crypto/tsconfig.lib.json",
+        "packageJson": "crypto/package.json",
+        "main": "crypto/src/index.ts",
+        "assets": ["crypto/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs crypto {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["crypto/**/*.ts", "crypto/package.json"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "crypto/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
