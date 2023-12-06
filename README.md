@@ -1,10 +1,8 @@
-# Seishinverse
-
 # Crypto
 
-Compact and fast crypto module for hashing and comparing hashes
+Compact and fast crypto library for hashing and comparing hashes.
 
-#### Installation
+### Installation
 
 ```sh
 npm i @seishinverse/crypto
@@ -15,8 +13,10 @@ yarn add @seishinverse/crypto
 # or with pnpm
 pnpm i @seishinverse/crypto
 ```
+### Documentation
+- https://seishinverse.github.io/crypto/
 
-#### Example of usage for NestJS
+### Example of usage for NestJS
 
 In first import `CryptoModule` in `AppModule`.
 
@@ -64,7 +64,7 @@ export class AppService {
 }
 ```
 
-#### Example of usage in NodeJS
+### Example of usage in NodeJS
 
 Import `CryptoService` and initialize it.
 
