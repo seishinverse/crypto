@@ -43,7 +43,7 @@
     "ts-node": "10.9.1",
     "typedoc": "^0.25.4",
     "typescript": "~5.3.3",
-    "verdaccio": "^5.0.4"
+    "verdaccio": "^5.29.0"
   },
   "nx": {
     "includedScripts": []
